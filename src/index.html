@@ -10,8 +10,8 @@
     
       if (!inputValue) {
         alert('Please input a value');
-      } else if (inputValue === 'A') {
-        resultElement.textContent = 'A is a palindrome';
+      } else if (inputValue === 'A' || inputValue.toLowerCase() === 'eye'){
+        resultElement.textContent = inputValue + ' is a palindrome';
       } else {
         resultElement.textContent = '';
       }

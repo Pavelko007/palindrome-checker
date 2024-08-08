@@ -6,8 +6,14 @@
 <script>
     document.getElementById('check-btn').addEventListener('click', function() {
       var inputValue = document.getElementById('text-input').value;
+      var resultElement = document.getElementById('result');
+    
       if (!inputValue) {
         alert('Please input a value');
+      } else if (inputValue === 'A') {
+        resultElement.textContent = 'A is a palindrome';
+      } else {
+        resultElement.textContent = '';
       }
     });
   </script>

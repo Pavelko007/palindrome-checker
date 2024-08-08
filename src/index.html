@@ -2,3 +2,12 @@
 <button id="check-btn">
   <div id="result"></div>
 </button>
+
+<script>
+    document.getElementById('check-btn').addEventListener('click', function() {
+      var inputValue = document.getElementById('text-input').value;
+      if (!inputValue) {
+        alert('Please input a value');
+      }
+    });
+  </script>

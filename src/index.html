@@ -8,12 +8,20 @@
       var inputValue = document.getElementById('text-input').value;
       var resultElement = document.getElementById('result');
     
-      if (!inputValue) {
+    if (!inputValue) {
         alert('Please input a value');
-      } else if (inputValue === 'A' || inputValue.toLowerCase() === 'eye'){
-        resultElement.textContent = inputValue + ' is a palindrome';
-      } else {
-        resultElement.textContent = '';
-      }
+    } else {
+        // Remove non-alphanumeric characters
+        var alphanumericValue = inputValue.replace(/[^a-zA-Z0-9]/g, '');
+        
+        // Convert to lowercase
+        var lowercaseValue = alphanumericValue.toLowerCase();
+
+        if (lowercaseValue === 'a' || lowercaseValue === 'eye') {
+            resultElement.textContent = inputValue + ' is a palindrome';
+        } else {
+            resultElement.textContent = '';
+        }
+    }
     });
   </script>
